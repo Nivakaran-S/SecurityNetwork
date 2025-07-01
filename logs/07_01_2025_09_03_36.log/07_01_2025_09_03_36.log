@@ -1,0 +1,6 @@
+[ 2025-07-01 09:03:48,555 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-07-01 09:03:48,562 ] 107 dagshub - INFO - Accessing as sliitguy
+[ 2025-07-01 09:03:49,100 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/sliitguy/SecurityNetwork "HTTP/1.1 200 OK"
+[ 2025-07-01 09:03:49,624 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-07-01 09:03:49,629 ] 107 dagshub - INFO - Initialized MLflow to track repo "sliitguy/SecurityNetwork"
+[ 2025-07-01 09:03:49,631 ] 107 dagshub - INFO - Repository sliitguy/SecurityNetwork initialized!
