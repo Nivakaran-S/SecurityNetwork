@@ -1,0 +1,7 @@
+[ 2025-08-12 15:39:54,043 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-08-12 15:39:54,050 ] 107 dagshub - INFO - Accessing as sliitguy
+[ 2025-08-12 15:39:54,613 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Nivakaran-S/SecurityNetwork "HTTP/1.1 404 Not Found"
+[ 2025-08-12 15:39:54,616 ] 107 dagshub - INFO - Repository SecurityNetwork doesn't exist, creating it under current user.
+[ 2025-08-12 15:39:55,354 ] 1025 httpx - INFO - HTTP Request: POST https://dagshub.com/api/v1/user/repos "HTTP/1.1 422 unknown"
+[ 2025-08-12 15:39:55,368 ] 163 dagshub.upload.wrapper - ERROR - Response (422):
+{"message":""}
