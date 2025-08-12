@@ -1,0 +1,24 @@
+[ 2025-08-12 17:18:33,569 ] 17 root - INFO - Initiate the data ingestion
+[ 2025-08-12 17:19:11,651 ] 62 root - INFO - Performed train test split on the dataframe
+[ 2025-08-12 17:19:11,651 ] 64 root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2025-08-12 17:19:11,653 ] 72 root - INFO - Exporting train and test file path.
+[ 2025-08-12 17:19:11,865 ] 81 root - INFO - Exported train and test file path.
+[ 2025-08-12 17:19:11,866 ] 19 root - INFO - Data Initiation Completed
+[ 2025-08-12 17:19:11,884 ] 24 root - INFO - Initiate the data Validation
+[ 2025-08-12 17:19:12,026 ] 32 root - INFO - Required number of columns:2
+[ 2025-08-12 17:19:12,038 ] 33 root - INFO - Data frame has columns:31
+[ 2025-08-12 17:19:12,038 ] 32 root - INFO - Required number of columns:2
+[ 2025-08-12 17:19:12,039 ] 33 root - INFO - Data frame has columns:31
+[ 2025-08-12 17:19:12,455 ] 26 root - INFO - data Validation Completed
+[ 2025-08-12 17:19:12,457 ] 31 root - INFO - data Transformation started
+[ 2025-08-12 17:19:12,457 ] 63 root - INFO - Entered initiate_data_transformation method of DataTransformation class
+[ 2025-08-12 17:19:12,457 ] 65 root - INFO - Starting data transformation
+[ 2025-08-12 17:19:12,523 ] 48 root - INFO - Entered get_data_trnasformer_object method of Trnasformation class
+[ 2025-08-12 17:19:12,523 ] 53 root - INFO - Initialise KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2025-08-12 17:19:12,562 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-08-12 17:19:12,567 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-08-12 17:19:12,568 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-08-12 17:19:12,574 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-08-12 17:19:12,577 ] 35 root - INFO - data Transformation completed
+[ 2025-08-12 17:19:12,577 ] 37 root - INFO - Model Training sstared
+[ 2025-08-12 17:30:52,823 ] 868 urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=5, read=5, redirect=5, status=5)) after connection broken by 'SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2393)')': /sliitguy/SecurityNetwork.mlflow/api/2.0/mlflow-artifacts/artifacts/71ebcf18035b4421a746d18bae06970a/7d6842e275ce428c8a1da4ddf12b59d8/artifacts/model/model.pkl

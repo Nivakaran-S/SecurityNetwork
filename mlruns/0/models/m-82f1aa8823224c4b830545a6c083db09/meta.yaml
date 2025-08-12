@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/LENOVO/Desktop/FINAL%20PROJECTS/NetworkSecurity/SecurityNetwork/mlruns/0/models/m-82f1aa8823224c4b830545a6c083db09/artifacts
+creation_timestamp: 1754995838287
+experiment_id: '0'
+last_updated_timestamp: 1754995845957
+model_id: m-82f1aa8823224c4b830545a6c083db09
+model_type: null
+name: model
+source_run_id: 5e8d90c6cef8450eaa01bab65248714f
+status: 2
+status_message: null

@@ -9,6 +9,7 @@ from networksecurity.entity.config_entity import ModelTrainerConfig
 
 
 
+
 from networksecurity.utils.ml_utils.model.estimator import NetworkModel
 from networksecurity.utils.main_utils.utils import save_object,load_object
 from networksecurity.utils.main_utils.utils import load_numpy_array_data,evaluate_models
@@ -27,7 +28,17 @@ import mlflow
 from urllib.parse import urlparse
 
 import dagshub
-dagshub.init(repo_owner='Nivakaran', repo_name='SecurityNetwork', mlflow=True)
+# dagshub.init(repo_owner='sliitguy', repo_name='SecurityNetwork', mlflow=True)
+
+
+from dotenv import load_dotenv
+load_dotenv()
+
+
+os.environ["MLFLOW_TRACKING_URI"]=os.getenv("MLFLOW_TRACKING_URI")
+os.environ["MLFLOW_TRACKING_USERNAME"]=os.getenv("MLFLOW_TRACKING_USERNAME")
+os.environ["MLFLOW_TRACKING_PASSWORD"]=os.getenv("MLFLOW_TRACKING_PASSWORD")
+
 
 
 class ModelTrainer:
@@ -39,7 +50,7 @@ class ModelTrainer:
             raise NetworkSecurityException(e,sys)
         
     def track_mlflow(self,best_model,classificationmetric):
-        mlflow.set_registry_uri("https://dagshub.com/nivakaran/networksecurity.mlflow")
+        mlflow.set_registry_uri("https://dagshub.com/sliitguy/SecurityNetwork.mlflow")
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
         with mlflow.start_run():
             f1_score=classificationmetric.f1_score
@@ -53,10 +64,8 @@ class ModelTrainer:
             mlflow.log_metric("recall_score",recall_score)
             mlflow.sklearn.log_model(best_model,"model")
             # Model registry does not work with file store
-            if tracking_url_type_store != "file":
-                mlflow.sklearn.log_model(best_model, "model", registered_model_name=best_model)
-            else:
-                mlflow.sklearn.log_model(best_model, "model")
+           
+         
 
 
         
