@@ -96,7 +96,6 @@ class TrainingPipeline:
             raise NetworkSecurityException(e,sys)
         
     ## local final model is going to s3 bucket 
-        
     def sync_saved_model_dir_to_s3(self):
         try:
             aws_bucket_url = f"s3://{TRAINING_BUCKET_NAME}/final_model/{self.training_pipeline_config.timestamp}"
